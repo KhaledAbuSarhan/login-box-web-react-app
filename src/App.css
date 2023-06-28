@@ -1,0 +1,202 @@
+/* Start Global Rules */
+:root {
+  --main-color : #fff;
+  --secondary-color: #1E90FF;
+  --main-font-color : #162938;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  width: 100%;
+  background-color: var(--main-font-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+}
+.logo {
+  font-size: 2em;
+  color: var(--main-color);
+  user-select: none;
+  cursor: pointer;
+}
+.navigation .login-btn {
+  margin: 5px 20px 5px 40px;
+  width: 75px;
+  height: 30px;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: var(--main-color);
+  font-weight: 500;
+  transition: 0.5s;
+}
+.navigation .login-btn:hover {
+  background-color: var(--main-color);
+  color: var(--main-font-color);
+}
+/* End Header */
+/* Start Login Box */
+.wrapper {
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  width: 380px;
+  height: 440px;
+  background-color: transparent;
+  border: 1px solid rgb(87, 87, 87);
+  border-radius: 6px;
+  /* box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3); */
+  /* backdrop-filter: blur(20px); */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 1s;
+}
+.form-box {
+  transition: 0.5s;
+}
+.hide {
+  display: none;
+}
+.displacing-login-box {
+  position: absolute;
+  transform: translateX(-380px);
+  opacity: 0.3;
+}
+.displacing-register-box {
+  position: absolute;
+  transform: translateX(380px);
+  opacity: 0.3;
+}
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background-color: var(--main-font-color);
+  font-size: 1.8em;
+  color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-bottom-left-radius: 8px ;
+  border-top-right-radius: 8px; */
+  border-radius: 8px;
+  border: 2px solid var(--main-color);
+  transition: 0.2s;
+}
+.wrapper .icon-close:hover {
+  background-color: #d4d4d4;
+  color: var(--main-font-color);
+  cursor: pointer;
+}
+.form-box h2:first-child {
+  font-size: 2em;
+  color: var(--main-font-color);
+  text-align: center;
+}
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid var(--main-font-color);
+  margin: 30px 0;
+}
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: var(--main-font-color);
+  font: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: var(--main-font-color);
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: var(--main-font-color);
+  line-height: 57px;
+}
+.input-box input:focus~label,
+.input-box input:valid~label, 
+.input-box input:not([value=""])~label {
+  top: -5px;
+}
+.remeber-forgot {
+  font-size: .9em;
+  color: var(--main-font-color);
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remeber-forgot label input {
+  accent-color: var(--main-font-color);
+  margin-right: 3px;
+}
+.remeber-forgot a {
+  color: var(--main-font-color);
+  text-decoration: none;
+}
+.remeber-forgot a:hover {
+  text-decoration: underline;
+}
+.form-box form .btn {
+  width: 100%;
+  height: 45px;
+  background-color: var(--main-font-color);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--main-color);
+  font-weight: 500;
+}
+.login-register {
+  font-size: .9em;
+  color: var(--main-font-color);
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+.login-register p a {
+  color: var(--main-font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-register p a:hover {
+  text-decoration: underline;
+}
+/* End Login Box */
